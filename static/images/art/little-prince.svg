@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- Маленький принц: планета с розой под стеклянным колпаком и звёзды -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="196" r="58"/>
+    <path d="M56 176 c14 6 26 6 40 0 M124 214 c14 4 26 2 38 -6"/>
+    <path d="M74 240 c10 8 24 12 38 10"/>
+    <path d="M100 138 v-24"/>
+    <path d="M88 116 c0 -12 6 -18 12 -24 c6 6 12 12 12 24 c0 10 -6 16 -12 16 c-6 0 -12 -6 -12 -16z"/>
+    <path d="M100 132 c-6 4 -14 4 -20 -2 M100 132 c6 4 14 4 20 -2"/>
+    <path d="M62 96 c0 -34 76 -34 76 0 v10 h-76z" stroke-dasharray="5 6"/>
+  </g>
+  <g stroke="#75D9CF" stroke-width="1.3" stroke-linecap="round">
+    <path d="M46 54 l0 14 M39 61 l14 0"/>
+    <path d="M156 44 l0 12 M150 50 l12 0"/>
+    <path d="M100 34 l0 12 M94 40 l12 0"/>
+  </g>
+  <circle cx="148" cy="84" r="2.4" fill="#E8D9A8"/>
+</svg>

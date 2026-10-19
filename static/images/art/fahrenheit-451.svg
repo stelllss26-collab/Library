@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- 451 градус: раскрытая книга, из которой поднимается пламя -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M34 236 c22 -12 44 -12 66 0 c22 -12 44 -12 66 0 v-56 c-22 -12 -44 -12 -66 0 c-22 -12 -44 -12 -66 0z"/>
+    <path d="M100 180 v56"/>
+    <path d="M46 196 c16 -6 32 -6 44 0 M46 212 c16 -6 32 -6 44 0"/>
+    <path d="M110 196 c16 -6 32 -6 44 0 M110 212 c16 -6 32 -6 44 0"/>
+    <path d="M100 168 c0 -22 -16 -30 -14 -52 c14 8 20 20 18 34 c8 -12 8 -26 2 -38 c22 14 30 42 12 62 c-6 6 -12 8 -18 8z"/>
+  </g>
+  <g stroke="#E8A96D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M76 132 c-8 -18 -2 -34 10 -46 c0 14 6 22 14 28 c2 -10 8 -18 16 -24 c4 20 -6 44 -26 52 c-10 4 -18 0 -24 -10z"/>
+  </g>
+  <g stroke="#5A1F0F" stroke-width="1.2" stroke-linecap="round">
+    <path d="M62 70 l-6 -12 M140 74 l6 -12 M100 44 l0 -12"/>
+  </g>
+</svg>

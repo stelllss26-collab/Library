@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- Граф Монте-Кристо: корабль под парусом у острова с замком -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 220 h144 l-18 30 h-108z"/>
+    <path d="M100 220 v-104"/>
+    <path d="M100 128 c30 -6 54 4 66 24 c-24 4 -48 4 -66 -4z"/>
+    <path d="M100 160 c26 -6 48 2 58 20 c-22 4 -42 4 -58 -4z"/>
+    <path d="M100 128 c-30 -6 -54 4 -66 24 c24 4 48 4 66 -4z"/>
+    <path d="M100 160 c-26 -6 -48 2 -58 20 c22 4 42 4 58 -4z"/>
+    <path d="M100 116 l0 -14 l14 6z"/>
+    <path d="M148 178 l16 -18 M154 176 l16 -14"/>
+    <path d="M40 196 c14 -34 34 -50 54 -48 c22 2 34 20 36 46" stroke-dasharray="5 6"/>
+    <path d="M148 196 v-40 h16 v40 M144 156 h24 l-6 -14 h-12z"/>
+  </g>
+  <g stroke="#D9C08F" stroke-width="1.2" stroke-linecap="round">
+    <path d="M40 262 c18 6 36 6 52 0 M110 262 c16 6 34 6 50 0"/>
+    <path d="M52 60 l0 12 M46 66 l12 0"/>
+  </g>
+</svg>

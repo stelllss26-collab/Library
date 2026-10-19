@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- Властелин колец: гора Ородруин и кольцо с надписью -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 244 l46 -96 l22 40 l24 -70 l60 126z"/>
+    <path d="M96 138 l6 12 M76 178 l10 8"/>
+    <path d="M40 244 h132"/>
+    <path d="M118 84 a34 34 0 1 1 -34 34 a34 34 0 0 1 34 -34z"/>
+    <path d="M118 84 a34 34 0 0 0 -34 34 M118 96 a22 22 0 0 0 -22 22"/>
+    <path d="M104 76 l4 6 M92 84 l6 4 M84 98 l7 2 M82 114 l7 -2 M88 130 l6 -5 M100 140 l4 -6"/>
+  </g>
+  <g stroke="#75D9CF" stroke-width="1.2" stroke-linecap="round">
+    <path d="M46 60 l0 12 M40 66 l12 0"/>
+    <path d="M154 56 l0 12 M148 62 l12 0"/>
+    <path d="M66 40 l0 10 M61 45 l10 0"/>
+  </g>
+  <circle cx="101" cy="118" r="3" fill="#75D9CF"/>
+</svg>

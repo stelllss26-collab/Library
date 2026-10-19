@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- Убить пересмешника: птица на ветке под палящим солнцем -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="148" cy="62" r="22"/>
+    <path d="M148 26 v-10 M148 108 v10 M112 62 h-10 M184 62 h10 M124 38 l-7 -7 M172 86 l7 7 M172 38 l7 -7 M124 86 l-7 7"/>
+    <path d="M32 210 c34 -6 76 -6 136 4"/>
+    <path d="M64 208 c-4 -10 -2 -18 4 -24"/>
+    <path d="M76 150 c14 -14 38 -14 52 2 c10 12 8 30 -4 40 c-6 6 -14 8 -22 6 c-18 -4 -32 -22 -26 -48z"/>
+    <path d="M128 152 l18 -6 l-16 16"/>
+    <path d="M76 160 c-12 -6 -22 -4 -30 4 c8 4 14 10 18 18"/>
+    <path d="M92 198 l-4 14 M110 198 l4 14"/>
+    <path d="M54 214 c-10 8 -16 18 -16 30 M54 214 c14 8 24 18 30 30"/>
+  </g>
+  <g stroke="#E0D0A0" stroke-width="1.2" stroke-linecap="round">
+    <path d="M136 130 l14 12 M160 118 l10 14"/>
+  </g>
+</svg>

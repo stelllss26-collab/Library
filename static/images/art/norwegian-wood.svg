@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- Норвежский лес: лесная тропа, сосны и луна под дождём -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 236 l14 -84 l-16 -6 l22 -54 l16 46 l16 -6 l-14 46 l24 8 l-42 56z"/>
+    <path d="M146 240 l14 -76 l-16 -6 l22 -50 l16 44 l14 -6 l-14 42 l22 8 l-40 44z"/>
+    <path d="M28 264 c40 -14 104 -14 146 0"/>
+    <path d="M96 264 c6 -26 4 -50 -8 -74"/>
+    <circle cx="104" cy="66" r="22"/>
+    <path d="M112 50 a22 22 0 1 0 6 34 a17 17 0 1 1 -6 -34z"/>
+  </g>
+  <g stroke="#75D9CF" stroke-width="1.2" stroke-linecap="round">
+    <path d="M56 40 l-8 22 M84 34 l-8 22 M152 36 l-8 22 M176 44 l-8 22 M124 40 l-6 16"/>
+    <path d="M70 120 l-6 18 M132 112 l-6 18"/>
+  </g>
+</svg>

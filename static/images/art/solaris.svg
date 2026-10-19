@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- Солярис: живой океан-спираль и далёкая планета -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 130 c0 -14 18 -22 32 -14 c20 12 22 44 2 62 c-26 24 -70 18 -92 -10 c-26 -34 -14 -86 24 -108 c44 -26 102 -6 124 38"/>
+    <path d="M100 152 c8 -6 18 -2 20 8 c3 14 -10 26 -24 24 c-18 -3 -28 -22 -20 -38"/>
+  </g>
+  <g stroke="#75D9CF" stroke-width="1.4" stroke-linecap="round">
+    <circle cx="148" cy="58" r="24"/>
+    <path d="M128 68 c14 8 32 8 44 -2"/>
+    <path d="M60 250 c20 8 44 8 66 -2 M44 274 c26 10 60 10 88 -4"/>
+    <path d="M40 74 l0 12 M34 80 l12 0"/>
+    <path d="M66 48 l0 10 M61 53 l10 0"/>
+  </g>
+  <circle cx="100" cy="164" r="3" fill="#75D9CF"/>
+</svg>

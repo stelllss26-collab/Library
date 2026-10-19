@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- Имя розы: филин на открытом книжном лабиринте-розе -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="96" r="34"/>
+    <path d="M74 76 l-12 -16 l20 4 M126 76 l12 -16 l-20 4"/>
+    <circle cx="88" cy="94" r="10"/>
+    <circle cx="112" cy="94" r="10"/>
+    <path d="M96 106 l4 8 l4 -8"/>
+    <path d="M70 118 c-8 24 -8 44 4 60 M130 118 c8 24 8 44 -4 60"/>
+    <path d="M64 190 c12 10 28 14 36 14 c8 0 24 -4 36 -14"/>
+    <path d="M52 226 h96 l-10 40 h-76z"/>
+    <path d="M100 226 v40 M64 236 h28 M108 236 h28 M64 250 h28 M108 250 h28"/>
+  </g>
+  <g stroke="#C9B27A" stroke-width="1.2" stroke-linecap="round">
+    <path d="M100 62 c0 -12 8 -18 18 -18"/>
+    <path d="M46 60 l0 12 M40 66 l12 0 M156 60 l0 12 M150 66 l12 0"/>
+  </g>
+</svg>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Библиотека забытых миров — интерактивная библиотека, где книги хранят порталы в другие миры, истории и эмоции.">
+  <title>Библиотека забытых миров</title>
+
+  <!-- Шрифты: литературный Cormorant Garamond для заголовков и Inter для текста.
+       Если интернета нет, сработают системные запасные шрифты из CSS. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!-- Простой SVG-фавикон: золотая звезда на тёмном фоне -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0D17'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23D7B56D'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <a class="skip-link" href="#collection">Перейти к коллекции книг</a>
+
+  <!-- ==================== ШАПКА ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+
+      <!-- Логотип: тонкая золотая эмблема с открытой книгой -->
+      <a class="logo" href="#top" aria-label="Библиотека забытых миров — на главную">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <!-- звезда над книгой -->
+          <path d="M20 3 L21.6 8.4 L27 10 L21.6 11.6 L20 17 L18.4 11.6 L13 10 L18.4 8.4 Z" class="logo-star"/>
+          <!-- раскрытые страницы -->
+          <path d="M20 22 C16 18.5 10.5 18.5 6 20.5 L6 31 C10.5 29 16 29 20 32.5" class="logo-page"/>
+          <path d="M20 22 C24 18.5 29.5 18.5 34 20.5 L34 31 C29.5 29 24 29 20 32.5" class="logo-page"/>
+          <line x1="20" y1="22" x2="20" y2="32.5" class="logo-spine"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-title">Библиотека<br>забытых миров</span>
+          <span class="logo-sub">The Library of Lost Worlds</span>
+        </span>
+      </a>
+
+      <!-- Основное меню (десктоп) -->
+      <nav class="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="#collection" data-nav="explore">Исследовать</a></li>
+          <li><a href="#moods">По настроению</a></li>
+          <li><a href="#collection" data-nav="collection">Коллекция</a></li>
+          <li><a href="#archive">Мой архив</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Иконка поиска: фокусирует строку поиска в коллекции -->
+        <button class="icon-btn" id="headerSearchBtn" type="button" aria-label="Перейти к поиску книг">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="10.5" cy="10.5" r="6.5"/>
+            <line x1="15.5" y1="15.5" x2="21" y2="21"/>
+          </svg>
+        </button>
+
+        <button class="btn btn-gold header-cta" id="headerCtaBtn" type="button">Найти свой мир</button>
+
+        <!-- Бургер-меню для мобильных -->
+        <button class="burger" id="burgerBtn" type="button"
+                aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильная навигация" hidden>
+      <ul>
+        <li><a href="#collection" data-nav="explore">Исследовать</a></li>
+        <li><a href="#moods">По настроению</a></li>
+        <li><a href="#collection" data-nav="collection">Коллекция</a></li>
+        <li><a href="#archive">Мой архив</a></li>
+      </ul>
+      <button class="btn btn-gold mobile-cta" id="mobileCtaBtn" type="button">Найти свой мир</button>
+    </nav>
+  </header>
+
+  <!-- Вертикальная «рейка» с названием библиотеки — декоративная подпись на полях -->
+  <div class="side-rail" aria-hidden="true">
+    <span class="side-rail-text">The Library of Lost Worlds &nbsp;·&nbsp; MMXXVI</span>
+  </div>
+
+  <main id="main">
+
+    <!-- ==================== ГЛАВНЫЙ ЭКРАН ==================== -->
+    <section class="hero" id="top">
+      <!-- Кинематографический фон библиотеки -->
+      <div class="hero-bg" aria-hidden="true">
+        <img src="{{ url_for('static', filename='images/hero-library.jpg') }}" alt="" loading="eager" decoding="async">
+      </div>
+      <div class="hero-bg-overlay" aria-hidden="true"></div>
+      <div class="hero-bg-vignette" aria-hidden="true"></div>
+
+      <!-- Светящиеся пылинки и звёзды создаёт JavaScript -->
+      <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+
+      <!-- Парящие волшебные свечи (создаёт JavaScript) -->
+      <div class="candle-field" id="candleField" aria-hidden="true"></div>
+
+      <!-- Тонкие «волшебные линии» -->
+      <svg class="hero-lines" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+        <circle cx="300" cy="300" r="220" class="orbit orbit-a"/>
+        <circle cx="300" cy="300" r="290" class="orbit orbit-b"/>
+        <path d="M40 520 C180 420 240 300 300 130" class="magic-line"/>
+        <path d="M560 80 C460 220 400 320 300 470" class="magic-line"/>
+      </svg>
+
+      <!-- Парящая старинная книга: чистый CSS/SVG, без тяжёлых картинок -->
+      <div class="hero-book-wrap" id="heroBook" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <div class="hero-book">
+          <div class="hb-cover hb-left">
+            <span class="hb-sigil" aria-hidden="true">✦</span>
+          </div>
+          <div class="hb-cover hb-right">
+            <!-- титульная плита старого фолианта -->
+            <span class="hb-plate">
+              <span class="hb-plate-title">Миры,<br>которых нет</span>
+              <span class="hb-plate-rule" aria-hidden="true"></span>
+              <span class="hb-plate-sub">Mundi Perditi · Tomus Primus</span>
+            </span>
+          </div>
+          <div class="hb-page hb-page-1"></div>
+          <div class="hb-page hb-page-2"></div>
+          <div class="hb-page hb-page-3">
+            <!-- строки рукописного текста на раскрытой странице -->
+            <span class="hb-script" aria-hidden="true"></span>
+            <span class="hb-page-sigil" aria-hidden="true">✧</span>
+          </div>
+          <div class="hb-spine"></div>
+          <div class="hb-star">✦</div>
+        </div>
+        <div class="hero-book-shadow"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">§ 00 &nbsp;—&nbsp; вход в библиотеку</p>
+        <h1 class="hero-title">
+          Некоторые книги<br>
+          <em>не читают.</em><br>
+          В них исчезают
+        </h1>
+        <p class="hero-lead">
+          Тысячи историй ждут своего читателя. Одни изменят твой взгляд на мир.
+          Другие напомнят, кем ты был. Найди ту, которая ищет именно тебя.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-gold btn-lg" id="heroOpenLibrary" type="button">Открыть библиотеку</button>
+          <button class="btn btn-ghost btn-lg" id="heroSurpriseBtn" type="button">Удиви меня</button>
+        </div>
+      </div>
+
+      <a class="hero-scroll-hint" href="#moods" aria-label="Прокрутить к разделу «Выбери настроение»">
+        <span class="scroll-line" aria-hidden="true"></span>
+        <span class="scroll-text">листай вниз</span>
+      </a>
+    </section>
+
+    <!-- ==================== § I. ВЫБЕРИ НАСТРОЕНИЕ ==================== -->
+    <section class="section moods-section" id="moods" data-num="I">
+      <div class="section-head reveal">
+        <p class="section-num">§ I &nbsp;—&nbsp; настроения</p>
+        <h2 class="section-title">В каком мире ты хочешь<br><em>оказаться сегодня?</em></h2>
+        <p class="section-lead">
+          Здесь нет жанров. Только ощущения. Выбери одно — и полки подвинутся,
+          показав книги, которые ищут именно такое настроение.
+        </p>
+      </div>
+
+      <!-- Сетка настроений (кнопки создаёт JavaScript) -->
+      <div class="mood-grid reveal" id="moodGrid" role="group" aria-label="Выбор настроения"></div>
+
+      <div class="mood-reset-row">
+        <button class="btn btn-ghost btn-sm" id="moodResetBtn" type="button" hidden>
+          Сбросить выбор ✕
+        </button>
+      </div>
+
+      <!-- Рекомендованные книги под сеткой настроений -->
+      <div class="mood-recommend reveal" id="moodRecommend" aria-live="polite"></div>
+    </section>
+
+    <!-- ==================== § II. КОЛЛЕКЦИЯ ==================== -->
+    <section class="section collection-section" id="collection" data-num="II">
+      <div class="section-head reveal">
+        <p class="section-num">§ II &nbsp;—&nbsp; коллекция</p>
+        <h2 class="section-title">Книги, которые<br><em>открывают порталы</em></h2>
+        <p class="section-lead">
+          Каждая книга здесь — дверь. Наведись, чтобы увидеть свет по ту сторону,
+          и открой портал, если посмеешь.
+        </p>
+      </div>
+
+      <!-- Панель поиска и фильтров -->
+      <div class="toolbar reveal">
+        <div class="toolbar-row">
+          <div class="search-field">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="10.5" cy="10.5" r="6.5"/>
+              <line x1="15.5" y1="15.5" x2="21" y2="21"/>
+            </svg>
+            <label class="visually-hidden" for="searchInput">Поиск по названию, автору, жанру, описанию…</label>
+            <input type="search" id="searchInput" placeholder="Поиск по названию, автору, жанру, описанию…"
+                   autocomplete="off">
+          </div>
+
+          <div class="select-field">
+            <label for="sortSelect">Сортировка</label>
+            <select id="sortSelect">
+              <option value="title">По названию</option>
+              <option value="author">По автору</option>
+              <option value="favorites">Сначала избранные</option>
+            </select>
+          </div>
+
+          <div class="select-field">
+            <label for="moodSelect">Настроение</label>
+            <select id="moodSelect">
+              <option value="all">Любое</option>
+            </select>
+          </div>
+
+          <label class="toggle-field">
+            <input type="checkbox" id="favoritesOnlyToggle">
+            <span class="toggle-track" aria-hidden="true"></span>
+            Только избранные
+          </label>
+        </div>
+
+        <!-- Фильтры по «жанрам» (на самом деле — по направлениям) -->
+        <div class="genre-chips" id="genreChips" role="group" aria-label="Фильтр по жанрам"></div>
+
+        <p class="toolbar-status" id="resultsCount" aria-live="polite"></p>
+      </div>
+
+      <!-- Сетка книг -->
+      <div class="books-grid" id="booksGrid"></div>
+
+      <!-- Пустое состояние поиска -->
+      <div class="empty-state" id="searchEmpty" hidden>
+        <span class="empty-symbol" aria-hidden="true">✧</span>
+        <p>По этому запросу полки оказались пусты.<br>Попробуй другое слово — или сбрось фильтры.</p>
+        <button class="btn btn-ghost btn-sm" id="searchEmptyReset" type="button">Сбросить все фильтры</button>
+      </div>
+    </section>
+
+    <!-- ==================== § III. КНИЖНЫЙ ОРАКУЛ ==================== -->
+    <section class="section oracle-section" id="oracle" data-num="III">
+      <div class="section-head reveal">
+        <p class="section-num">§ III &nbsp;—&nbsp; оракул</p>
+        <h2 class="section-title">Книжный оракул<br><em>выберет за тебя</em></h2>
+        <p class="section-lead">
+          Четыре вопроса — и библиотека подаст книгу, которая откликается на твои ответы.
+          Просто отвечай честно.
+        </p>
+      </div>
+
+      <div class="oracle-card reveal" id="oracleCard">
+        <!-- Шаг 1: сами вопросы -->
+        <div class="oracle-stage" id="oracleStageQuiz">
+          <div class="oracle-progress">
+            <div class="oracle-progress-bar" id="oracleProgressBar"></div>
+          </div>
+          <p class="oracle-step" id="oracleStepLabel"></p>
+
+          <h3 class="oracle-question" id="oracleQuestion"></h3>
+
+          <div class="oracle-options" id="oracleOptions" role="group" aria-label="Варианты ответа"></div>
+
+          <div class="oracle-nav">
+            <button class="btn btn-ghost btn-sm" id="oracleBackBtn" type="button">← Назад</button>
+          </div>
+        </div>
+
+        <!-- Шаг 2: результат -->
+        <div class="oracle-stage" id="oracleStageResult" hidden>
+          <p class="oracle-result-eyebrow">Оракул говорит:</p>
+          <div class="oracle-result-body" id="oracleResultBody"></div>
+          <div class="oracle-nav">
+            <button class="btn btn-ghost btn-sm" id="oracleRestartBtn" type="button">Пройти ещё раз</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== § IV. МОЙ АРХИВ ==================== -->
+    <section class="section archive-section" id="archive" data-num="IV">
+      <div class="section-head reveal">
+        <p class="section-num">§ IV &nbsp;—&nbsp; личное</p>
+        <h2 class="section-title">Мой архив</h2>
+        <p class="section-lead">
+          Сохранённые порталы. Без регистрации — библиотека запоминает тебя
+          прямо в этом браузере.
+        </p>
+      </div>
+
+      <p class="archive-counter reveal">
+        Сохранено книг: <strong id="archiveCount">0</strong>
+      </p>
+
+      <div class="books-grid archive-grid" id="archiveGrid"></div>
+
+      <div class="empty-state reveal" id="archiveEmpty">
+        <span class="empty-symbol" aria-hidden="true">☾</span>
+        <p>В твоём архиве пока нет историй.<br>Возможно, одна из них уже ждёт тебя среди полок.</p>
+        <button class="btn btn-gold" id="archiveGoSearch" type="button">Отправиться на поиски</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== ПОДВАЛ ==================== -->
+  <footer class="site-footer">
+    <div class="footer-quote reveal">
+      <p>«Пока ты читаешь, мир ненадолго соглашается подождать».</p>
+      <span class="footer-quote-note">— оригинальная строка этой библиотеки</span>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-name">Библиотека забытых миров</p>
+        <p class="footer-desc">
+          Интерактивная библиотека о книгах, которые не рассказывают истории,
+          а открывают в них порталы. Выбирай не жанр, а настроение.
+        </p>
+      </div>
+      <nav class="footer-nav" aria-label="Навигация по разделам">
+        <p class="footer-nav-title">Разделы</p>
+        <ul>
+          <li><a href="#moods">По настроению</a></li>
+          <li><a href="#collection">Коллекция книг</a></li>
+          <li><a href="#oracle">Книжный оракул</a></li>
+          <li><a href="#archive">Мой архив</a></li>
+        </ul>
+      </nav>
+      <div class="footer-colophon">
+        <p class="footer-nav-title">Колофон</p>
+        <p>Сделано на Flask, HTML, CSS и чистом JavaScript.<br>
+        Обложки нарисованы светом и типографикой.</p>
+      </div>
+    </div>
+
+    <p class="footer-fine">© <span id="footerYear"></span> The Library of Lost Worlds. Читай дальше.</p>
+  </footer>
+
+  <!-- ==================== МОДАЛЬНОЕ ОКНО КНИГИ ==================== -->
+  <div class="modal-overlay" id="bookModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" id="bookModalDialog">
+      <button class="modal-close" id="modalCloseBtn" type="button" aria-label="Закрыть окно (Escape)">✕</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ОВЕРЛЕЙ «УДИВИ МЕНЯ» ==================== -->
+  <div class="surprise-overlay" id="surpriseOverlay" hidden>
+    <div class="surprise-inner" role="dialog" aria-modal="true" aria-label="Случайная книга из библиотеки" id="surpriseDialog">
+      <button class="modal-close" id="surpriseCloseBtn" type="button" aria-label="Закрыть (Escape)">✕</button>
+
+      <!-- Фаза 1: затемнение и светящийся символ -->
+      <div class="surprise-ritual" id="surpriseRitual" aria-hidden="true">
+        <div class="ritual-symbol">✦</div>
+        <p>Библиотека выбирает…</p>
+      </div>
+
+      <!-- Фаза 2: переворачивающаяся карточка с книгой -->
+      <div class="surprise-result" id="surpriseResult" hidden></div>
+    </div>
+  </div>
+
+  <!-- ==================== ВКЛАДОЧНАЯ ПАНЕЛЬ «ГЛАВЫ» ==================== -->
+  <nav class="chapter-dock" id="chapterDock" aria-label="Переход по главам библиотеки">
+    <a class="dock-tab" href="#top" data-dock="top">
+      <span class="dock-rune" aria-hidden="true">✦</span><span class="dock-label">Вход</span>
+    </a>
+    <a class="dock-tab" href="#moods" data-dock="moods">
+      <span class="dock-rune" aria-hidden="true">✧</span><span class="dock-label">Настроения</span>
+    </a>
+    <a class="dock-tab" href="#collection" data-dock="collection">
+      <span class="dock-rune" aria-hidden="true">◈</span><span class="dock-label">Коллекция</span>
+    </a>
+    <a class="dock-tab" href="#oracle" data-dock="oracle">
+      <span class="dock-rune" aria-hidden="true">❖</span><span class="dock-label">Оракул</span>
+    </a>
+    <a class="dock-tab" href="#archive" data-dock="archive">
+      <span class="dock-rune" aria-hidden="true">☾</span><span class="dock-label">Архив</span>
+    </a>
+  </nav>
+
+  <!-- Кнопка «наверх» -->
+  <button class="to-top" id="toTopBtn" type="button" aria-label="Вернуться наверх" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <polyline points="6 14 12 8 18 14"/>
+    </svg>
+  </button>
+
+  <!-- Живая область для сообщений (например, «добавлено в избранное») -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</body>
+</html>

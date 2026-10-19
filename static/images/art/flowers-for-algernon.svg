@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- Цветы для Элджернона: мышь и звезда-цветок -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="96" cy="196" rx="46" ry="34"/>
+    <path d="M52 186 c-14 -4 -24 4 -24 16 c0 14 14 22 30 18"/>
+    <path d="M56 174 a14 14 0 1 1 12 -22"/>
+    <path d="M74 166 a12 12 0 1 1 8 -18"/>
+    <circle cx="56" cy="192" r="2.6"/>
+    <path d="M46 206 l-10 6 M46 214 l-10 10"/>
+    <path d="M138 206 c16 6 24 22 18 40 c-4 12 -16 16 -24 8"/>
+    <path d="M96 162 c4 -12 4 -22 0 -34"/>
+  </g>
+  <g stroke="#C9B7E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M96 92 l8 20 l22 2 l-17 14 l6 22 l-19 -12 l-19 12 l6 -22 l-17 -14 l22 -2z"/>
+    <path d="M96 128 v14"/>
+    <path d="M84 150 c8 -6 16 -6 24 0"/>
+  </g>
+  <g stroke="#9D83D8" stroke-width="1.2" stroke-linecap="round">
+    <path d="M46 96 l0 10 M41 101 l10 0 M152 130 l0 10 M147 135 l10 0"/>
+  </g>
+</svg>

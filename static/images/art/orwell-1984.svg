@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- 1984: всевидящее око над башней -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 110 c22 -34 98 -34 120 0 c-22 34 -98 34 -120 0z"/>
+    <circle cx="100" cy="110" r="20"/>
+    <circle cx="100" cy="110" r="8"/>
+    <path d="M84 176 h32 l8 70 h-48z"/>
+    <path d="M76 210 h48 M72 246 h56"/>
+    <path d="M100 176 v-14 M70 262 l-12 24 M130 262 l12 24"/>
+  </g>
+  <g stroke="#9D83D8" stroke-width="1.2" stroke-linecap="round">
+    <path d="M52 64 l-8 -10 M148 64 l8 -10 M100 52 v-14"/>
+    <path d="M46 268 l-10 8 M154 268 l10 8"/>
+  </g>
+  <circle cx="100" cy="110" r="4" fill="#9D83D8"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- Дюна: солнце, дюны и песчаный червь -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="140" cy="66" r="26"/>
+    <path d="M24 128 c30 -24 58 -18 84 2 c26 20 52 24 68 8"/>
+    <path d="M24 168 c34 -20 66 -12 92 8 c18 14 40 16 60 6"/>
+    <path d="M30 214 c40 20 96 24 142 4"/>
+    <path d="M44 252 c36 14 82 16 118 -4"/>
+  </g>
+  <g stroke="#E8C98F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 190 c18 -26 52 -30 78 -14 c-14 4 -22 10 -26 18 c16 -4 30 -2 40 6 c-24 14 -70 12 -92 -10z"/>
+    <path d="M56 186 l6 6 M74 176 l6 8 M96 174 l4 10"/>
+  </g>
+  <g stroke="#D7B56D" stroke-width="1.2" stroke-linecap="round">
+    <path d="M46 60 l0 12 M40 66 l12 0"/>
+    <path d="M84 44 l0 10 M79 49 l10 0"/>
+  </g>
+</svg>

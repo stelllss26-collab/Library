@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none" aria-hidden="true">
+  <!-- Сто лет одиночества: бабочка над домиком под дождём из цветов -->
+  <g stroke="#D7B56D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 120 c-14 -34 -56 -46 -70 -24 c-12 20 6 44 40 50 c-26 8 -40 30 -26 46 c16 18 46 -2 56 -34z"/>
+    <path d="M100 120 c14 -34 56 -46 70 -24 c12 20 -6 44 -40 50 c26 8 40 30 26 46 c-16 18 -46 -2 -56 -34z"/>
+    <path d="M100 108 v64"/>
+    <path d="M100 108 l-8 -14 M100 108 l8 -14"/>
+    <path d="M62 246 h76 l-8 -44 h-60z"/>
+    <path d="M84 246 v-22 h14 v22 M110 230 h14 v10 h-14z"/>
+    <path d="M56 246 h92"/>
+    <path d="M76 202 l-4 -14 h56 l-4 14"/>
+  </g>
+  <g stroke="#E0C98F" stroke-width="1.2" stroke-linecap="round">
+    <path d="M50 60 l-6 16 M74 44 l-6 16 M126 44 l-6 16 M150 60 l-6 16 M100 36 l-6 14"/>
+  </g>
+  <g fill="#E0C98F">
+    <circle cx="56" cy="76" r="2.2"/><circle cx="146" cy="76" r="2.2"/><circle cx="100" cy="56" r="2.2"/>
+  </g>
+</svg>
